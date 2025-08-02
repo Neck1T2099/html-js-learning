@@ -1,2 +1,1 @@
-console.log("Привет, Никита!");
-alert("JavaScript работает!");
+alert("Welcome to my website");
