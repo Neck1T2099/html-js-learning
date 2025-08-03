@@ -19,6 +19,17 @@ body {
   pointer-events: none;
 }
 
+.content .line {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.content .line.visible {
+  animation: fade-in 1s forwards;
+  visibility: visible;
+}
+
+
 .content.visible {
   animation: fade-in 1s forwards;
   visibility: visible;

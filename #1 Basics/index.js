@@ -1,11 +1,23 @@
-// Reveal content on right-click
-// Prevent default context menu on first click and fade in the text pls
+// Reveal lines sequentially on left-click
 
 alert("Just click on this page to display anything")
 
-document.addEventListener('click', function handler(event) { // Im an idiot sorry
+const content = document.querySelector('.content');
+const lines = Array.from(content.children);
+let index = 0;
+
+document.addEventListener('click', function handler(event) {
   event.preventDefault();
-  const content = document.querySelector('.content');
-  content.classList.add('visible');
-  document.removeEventListener('click', handler); // ЛКМ блять и ПКМ перепутал 20 лет кстати
+  if (event.button !== 0) return; // only lmc nigga
+
+  if (!content.classList.contains('visible')) {
+    content.classList.add('visible');
+  }
+
+  if (index < lines.length) {
+    lines[index].classList.add('visible');
+    index++;
+  } else {
+    document.removeEventListener('click', handler);
+  }
 });
