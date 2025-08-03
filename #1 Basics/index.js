@@ -1,6 +1,8 @@
 // Reveal content on right-click
 // Prevent default context menu on first click and fade in the text pls
 
+alert("Just click on this page to display anything")
+
 document.addEventListener('click', function handler(event) { // Im an idiot sorry
   event.preventDefault();
   const content = document.querySelector('.content');
