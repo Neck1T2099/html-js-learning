@@ -1,23 +1,38 @@
 body {
   background-color: #333;
   color: #fff;
-  font-family: sans-serif;
+  font-family: "Century Gothic", sans-serif;
+  font-weight: bold;
   margin: 0;
   overflow-x: hidden;
 }
 
 .content {
-  animation: slide-in 1s ease-out forwards;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  text-align: center;
   opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
 }
 
-@keyframes slide-in {
+.content.visible {
+  animation: fade-in 1s forwards;
+  visibility: visible;
+  pointer-events: auto;
+}
+
+@keyframes fade-in {
   from {
-    transform: translateX(-100%);
     opacity: 0;
   }
   to {
-    transform: translateX(0);
     opacity: 1;
   }
 }
+/* Im a femboy
+nigga..
+*/
